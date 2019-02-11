@@ -1,0 +1,164 @@
+@import url('https://fonts.googleapis.com/css?family=Reem+Kufi');
+
+*{
+	margin: 0px;
+	padding: 0px;
+	font-family: "Reem Kufi", sans-serif;
+}
+
+.grid-container{
+	display: grid;
+	grid-template-columns: 1fr;
+	grid-template-rows:1fr;
+	}
+
+.content-box1,.content-box2{
+	width: 330px;
+	min-height: 100px;
+	margin: 0 auto;
+}
+
+header{
+	display: flex;
+	flex-flow: row;
+	width:100%;
+	height:60px;
+	background-color: #434141;
+	}
+
+.titel{
+	font-size: 24px;
+	color: white;
+	letter-spacing: 2.5px;
+	margin: 12px 0px 0px 15px;
+	}
+
+section{
+	margin-bottom: 30px;
+	}
+
+.titel_voorraden{
+	margin-bottom:26px;
+	font-size: 24px;
+	}
+
+.grafiektitel{
+	position: absolute;
+	color: white;
+	font-size: 15px;
+	width: 76px;
+	height: 21px;
+	background-color: #434141;
+	line-height: normal;
+	letter-spacing: 0.75px;
+	margin-top: 10px;
+	box-shadow: 0px 4px 5px #AFAEAE;
+}
+.grafiektekst_box{
+	width: 148px;
+	height: 80px;
+	margin-top: 172px;
+	position: absolute;
+}
+.grafiektekst{
+	width: 148px;
+	height: 80px;
+	background-color: #434141;
+	font-size: 14px;
+	color: white;
+	line-height: normal;
+	text-align: left;
+}
+
+.Procescirkel{
+	display: flex;
+	flex-flow: row;
+	width: 100%;
+}
+
+.Procescirkel .grafiek{ 
+	display: flex;
+	flex-flow: column;
+	width: 148px;
+	height: 252px;
+	margin-right: 15px;
+	text-align: center;
+	font-size: 24px;
+	line-height: 190px;
+	background-color: #E5E2E2;
+}
+
+.Procescirkel .grafiek canvas{
+	position: absolute;
+	margin: 40px 0px 0px 20px;
+}
+
+.titel_voedsel{
+	margin-top: 20px;
+}
+
+li{
+	list-style: none;
+	margin: 20px 0px;
+}
+
+.bar{
+	background: #434141;
+	display: block;
+	height: 15px;
+	/*border:1px solid rgba(0,0,0,0.3);*/
+	overflow: hidden;
+	box-shadow: 0 0 10px #EB7D7D;
+}
+
+.bar span{
+	height: 15px;
+	float: left;
+	background: #CF1C1C;
+}
+
+.brood{
+	width: 60%;
+	animation: brood 2s;
+}
+
+.pasta{
+	width: 30%;
+	animation: pasta 2s;
+}
+
+.rijst{
+	width: 40%;
+	animation: rijst 2s;
+}
+
+@keyframes brood{
+	0%{
+		width: 0%;
+	}
+	100%{
+		width: 60%;
+	}
+}
+
+@keyframes pasta{
+	0%{
+		width: 0%;
+	}
+	100%{
+		width: 30%;
+	}
+}
+
+@keyframes rijst{
+	0%{
+		width: 0%;
+	}
+	100%{
+		width: 40%;
+	}
+}
+
+.content-box2{
+	background-color:
+}

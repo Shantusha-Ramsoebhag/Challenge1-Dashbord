@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8"/>
+	<title>SpaceX Data</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" type="text/css" href="style/challenge1.css">
+</head>
+<body>
+	<script src="https://code.jquery.com/jquery-3.3.1.js"></script>
+	<script src="jquery.easypiechart.js"></script>
+	<script>
+	   $(function() {
+	       $('.grafiek').easyPieChart({
+	           //your options goes here
+	       });
+	    });
+	</script>
+	<div class="grid-container">
+		<div class="grid-item-box1">
+			<header>
+				<p class="titel">Space<font color="#CF1C1C">X</font></p>
+			</header>
+		</div>
+		<div class="grid-item-box2">
+			<div class="content-box1">
+				<section>
+					<h4>Interplenteray Transport System Data</h4>
+				</section>
+				<h2 class="titel_voorraden">Voorraden</h2>
+				<div class="Procescirkel">
+					<div class="grafiek" data-percent="60">60%
+						<p class="grafiektitel">Voedsel</p>
+						<div class="grafiektekst_box">
+							<p class="grafiektekst">Aantal over</p>
+						</div>
+					</div>
+					<div class="grafiek" data-percent="60">60%
+						<p class="grafiektitel">Drank</p>
+						<div class="grafiektekst_box">
+							<p class="grafiektekst">Aantal over</p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="grid-item-box3">
+			<div class="content-box2">
+				<h2 class="titel_voedsel">Voedsel</h2>
+				<li>
+					<h3>Brood</h3><span class="bar"><span class="brood"></span></span>
+				</li>
+					<li>
+					<h3>Pasta</h3><span class="bar"><span class="pasta"></span></span>
+				</li>
+					<li>
+					<h3>Rijst</h3><span class="bar"><span class="rijst"></span></span>
+				</li>
+			</div>
+		</div>
+		
+
+	</div>
+</body>
+</html>
