@@ -1,10 +1,9 @@
-@import url('https://fonts.googleapis.com/css?family=Reem+Kufi');
-
+@import url('https://fonts.googleapis.com/css?family=Rajdhani');
 *{
 	margin: 0px;
 	padding: 0px;
-	font-family: "Reem Kufi", sans-serif;
-}
+	font-family: "Rajdhani", sans-serif;
+	}
 
 .grid-container{
 	display: grid;
@@ -12,11 +11,11 @@
 	grid-template-rows:1fr;
 	}
 
-.content-box1,.content-box2{
+.content-box1,.content-box2,.content-box3,.content-box4, .content-box5{
 	width: 330px;
 	min-height: 100px;
 	margin: 0 auto;
-}
+	}
 
 header{
 	display: flex;
@@ -30,13 +29,6 @@ header{
 	margin: 10px 0px 0px 15px;
 	width: 60%;
 	height: 50%;
-}
-
-.titel{
-	font-size: 24px;
-	color: white;
-	letter-spacing: 2.5px;
-	margin: 12px 0px 0px 15px;
 	}
 
 section{
@@ -44,122 +36,149 @@ section{
 	margin-top: 10px;
 	}
 
-.titel_voorraden{
+.titel_voorraden, .titel_Brandstof, .titel_Brandstof_barchart{
 	margin-bottom:26px;
 	font-size: 24px;
+	color: #434141;
+	}
+
+.titel_Brandstof_barchart{
+	margin-bottom: 0px;
+	margin-top: 35px;
+}
+
+ .titel_voedsel, .subtitelvoedsel, .titel_drank, .subtiteldrank{
+	color: #434141;
+}
+
+.centertitel{
+	width: 76px;
+	height: 21px;
+	position: absolute;
+	box-shadow: 0px 4px 5px #AFAEAE;
+	background-color: #434141;
 	}
 
 .grafiektitel{
-	position: absolute;
 	color: white;
 	font-size: 15px;
 	width: 76px;
 	height: 21px;
-	background-color: #434141;
 	line-height: normal;
 	letter-spacing: 0.75px;
-	margin-top: 10px;
-	box-shadow: 0px 4px 5px #AFAEAE;
-}
+	margin: auto;
+	}
+
 .grafiektekst_box{
 	width: 148px;
-	height: 80px;
-	margin-top: 172px;
-	position: absolute;
-}
-.grafiektekst{
-	width: 148px;
-	height: 80px;
+	min-height: 80px;
 	background-color: #434141;
-	font-size: 14px;
-	color: white;
+	position: absolute;
+	margin-top: 172px;
+	}
+
+.grafiektekst{
+	width:130px;
+	min-height: 50px;
+	font-size: 13px;
 	line-height: normal;
+	color: white;
 	text-align: left;
-}
+	margin: 10px 0px 0px 10px;
+	letter-spacing: 1px;
+	}
 
 .Procescirkel{
 	display: flex;
 	flex-flow: row;
 	width: 100%;
-}
+	}
 
 .Procescirkel .grafiek{ 
 	display: flex;
 	flex-flow: column;
 	width: 148px;
 	height: 252px;
-	text-align: center;
 	font-size: 24px;
-	line-height: 190px;
+	line-height: 215px;
 	background-color: #E5E2E2;
-}
+	font-weight: bold;	
+	}
+
+#Procescirkel_brandstof, #grafiekbrandstof{
+	width: 330px ;	
+	}
+
+.percentage{
+	width:148px;
+	height:125px;
+	text-align: center;
+	font-weight: bold;
+	font-size: 26px;
+	}
 
 #grafiekvoedsel{
 	margin-right: 33px;
-}
+	}
+
 .Procescirkel .grafiek canvas{
 	position: absolute;
-	margin: 40px 0px 0px 20px;
-}
+	margin: 40px 0px 5px 10px;
+	}
 
-.titel_voedsel{
+p{
+	margin-top: 10px;
+	max-width: 330px;
+	font-size: 17px;
+	}
+
+.titel_voedsel, .titel_drank{
 	margin-top: 20px;
-}
+	}
 
 li{
 	list-style: none;
-	margin: 20px 0px;
-}
+	margin: 18px 0px;
+	display: flex;
+	flex-flow: column;
+	}
 
 .bar{
+	width: 270px;
+	align-self: flex-end;
 	background: #434141;
 	display: block;
 	height: 15px;
-	/*border:1px solid rgba(0,0,0,0.3);*/
 	overflow: hidden;
 	box-shadow: 0 0 10px #EB7D7D;
-}
+	}
 
 .bar span{
 	height: 15px;
 	float: left;
 	background: #CF1C1C;
+	}
+
+#bar_drank{
+	width: 225px;
 }
 
-.brood{
-	width: 60%;
-	animation: brood 2s;
-}
+.soep{
+	width: 40%;
+	animation: soep 2s;
+	}
 
 .pasta{
-	width: 30%;
+	width: 50%;
 	animation: pasta 2s;
-}
-
-.rijst{
-	width: 40%;
-	animation: rijst 2s;
-}
-
-@keyframes brood{
-	0%{
-		width: 0%;
 	}
-	100%{
-		width: 60%;
-	}
-}
 
-@keyframes pasta{
-	0%{
-		width: 0%;
+.vlees{
+	width: 75%;
+	animation: vlees 2s;
 	}
-	100%{
-		width: 30%;
-	}
-}
 
-@keyframes rijst{
+@keyframes soep{
 	0%{
 		width: 0%;
 	}
@@ -168,6 +187,542 @@ li{
 	}
 }
 
-.content-box2{
-	background-color:
+@keyframes pasta{
+	0%{
+		width: 0%;
+	}
+	100%{
+		width: 50%;
+	}
 }
+
+@keyframes vlees{
+	0%{
+		width: 0%;
+	}
+	100%{
+		width: 75%;
+	}
+}
+
+.drinkwater{
+	width: 80%;
+	animation: drinkwater 2s;
+	}
+
+.douchwater{
+	width: 60%;
+	animation: douchwater 2s;
+	}
+
+.warm_water{
+	width: 40%;
+	animation: warm_water 2s;
+	}
+
+@keyframes drinkwater{
+	0%{
+		width: 0%;
+	}
+	100%{
+		width: 80%;
+	}
+}
+
+@keyframes douchwater{
+	0%{
+		width: 0%;
+	}
+	100%{
+		width: 60%;
+	}
+}
+
+@keyframes warm_water{
+	0%{
+		width: 0%;
+	}
+	100%{
+		width: 40%;
+	}
+}
+
+.grid-item-box3,.grid-item-box4{
+	background-color: #E5E2E2;
+	}
+
+.grid-item-box3{
+	margin: 30px 0px 30px 0px;
+	}
+
+.grid-item-box4{
+	margin-bottom:30px;
+	}
+
+.Voedselaantal, .Drankaantal{
+	width:150px;
+	height:25px;
+	align-self: flex-end;
+	position: relative;
+	top: 0px;
+	font-size: 20px;
+	color: #434141;
+	font-weight: bolder;
+	margin-bottom: 5px;
+	}
+
+.subtitelvoedsel,.subtiteldrank{
+	width: 50px;
+	height: 25px;
+	align-self: flex-start;
+	position: relative;
+	top: 47px;
+	font-size: 18px;
+	}
+
+.subtiteldrank{
+	width: 95px;
+	height: 25px; 
+	}
+#barchart{
+	width: 340px;
+	height: 400px;
+	}
+
+#barchart text{
+	font-size: 15px;
+	letter-spacing: 1px;
+	}
+
+footer{
+	display: flex;
+	width: 100%;
+	height: 66px;
+	color: white;
+	background-color: #434141;
+	letter-spacing: 1.5px;
+	}
+
+.Copyright{
+	align-self: center;
+	margin: auto;
+	}
+
+/* Hier komt de code voor Tablet resolutie */
+
+@media only screen and (min-width: 361px){
+	.content-box1,.content-box2,.content-box3,.content-box4{
+		min-width: 200px;
+		min-height: 100px;
+		}
+
+	.content-box5{
+		width: 350px;
+		height: 300px;
+		margin: auto;
+		}
+
+	.grid-container{
+		grid-template-columns: 1fr 1fr;
+		}
+
+	.grid-item-box1{
+		grid-column:1/4; 
+		grid-row:1;
+		}
+
+	.grid-item-box2{
+		grid-column:1/4; 
+		grid-row:2;
+		}
+
+	.grid-item-box5{
+		grid-row: 4;
+		}
+
+	.grid-item-box7{
+		grid-column: 1/4;
+		grid-row:5;
+		}
+
+	.grid-item-box6{
+		grid-row: 4;
+		}
+
+	.grid-item-box3, .grid-item-box4{
+		margin: 30px 0px 30px 0px;
+		}
+
+	.logo{
+		margin: 10px 0px 0px 30px;
+		width: 30%;
+		height: 50%;
+		}
+
+	.content-box1{
+		width: 700px;
+		min-height: 100px;
+		}
+
+	.content-box2, .content-box3{
+		background-color: #E5E2E2;
+		padding: 20px;
+		width: 310px;
+		min-height: 300px;
+		}
+
+	.content-box2{
+		margin-right: 0px;
+		}
+	.content-box3{
+		margin-left: 0px;
+		}
+
+	.content-box4{
+		width:333px;
+		min-height:300px;
+		margin-left: 35px;
+		margin-bottom: 30px;
+		}
+
+	#Procescirkel_brandstof, #grafiekbrandstof{
+		width: 333px;
+		height: 305px;
+		}
+
+	.bar{
+		width: 250px;
+		height: 18px;
+		}
+
+	.bar span{
+		height: 18px;
+		}
+
+	#bar_drank{
+		width: 200px;
+		}
+
+	.titel_voedsel, .titel_drank{
+		margin-top: 0px;
+		}
+
+	.centertitel{
+		width: 333px;
+		height: 46px;
+		}
+
+	.grafiektitel{
+		font-size: 21px;
+		margin: 10px 0px 10px 15px;
+		}
+
+	.Procescirkel .grafiek{ 
+		width: 465px;
+		height: 305px;
+		font-size: 24px;
+		line-height: 190px;
+		text-align: left;
+		}
+
+	#barchart{
+		width: 360px;
+		height: 270px;
+		}
+
+	.percentage{
+		width: 180px;
+		height: 165px;
+		margin: auto;
+		text-align: left;
+		}
+
+	.grafiektekst_box{
+		width: 148px;
+		height: 80px;
+		align-self: flex-end;
+		margin-top: 130px;
+		}
+
+	.Procescirkel .grafiek canvas{
+		margin: 100px 0px 0px 30px;
+		}
+
+	.grid-item-box3,.grid-item-box4{
+		background-color:white;
+		}
+
+	#centertitel_brandstof{
+		width: 333px;
+		}
+
+	.titel_Brandstof_barchart{
+		margin-top: 0px;
+	}
+}
+
+/*Hier komt de code voor desktop klein resolutie */
+@media only screen and (min-width: 766px){
+
+	.logo{
+		margin: 10px 0px 0px 30px;
+		width: 20%;
+		height: 50%;
+		}
+
+	.content-box1{
+		width: 1250px;
+		}
+
+	.content-box2,.content-box3{
+		width: 585px;
+		}
+
+	 .content-box4{
+		width: 600px;
+		min-height: 400px;
+		margin: auto;
+		margin-right: 25px;
+		}
+
+	.content-box5{
+		width: 600px;
+		min-height: 400px;
+		}
+
+	#Procescirkel_brandstof, #grafiekbrandstof{
+		width: 600px;
+		}
+
+	#centertitel_brandstof{
+		width: 600px;
+		}
+
+	.Procescirkel .grafiek{ 
+		width: 600px;
+		height: 405px;
+		font-size: 24px;
+		}
+
+	.Procescirkel .grafiek canvas{
+		margin-left: 150px;
+		margin-top: 140px;
+		width: 200px;
+		height: 200px;
+	}
+
+	.percentage{
+		width: 210px;
+		height: 175px;
+		}
+
+	#percentage_brandstof{
+		width:210px;
+		height:100px;
+		margin-bottom: 93px;
+	}
+
+
+	#grafiekvoedsel{
+		margin-right: 50px;
+		}
+
+	.centertitel{
+		width: 600px;
+		height: 56px;
+		}
+
+	.grafiektitel{
+		font-size: 34px;
+		margin: 10px 0px 10px 15px;
+		}
+
+	.grafiektekst_box{
+		width: 248px;
+		height: 150px;
+		}
+
+	.grafiektekst{
+		width:230px;
+		height: 140px;
+		font-size: 23px;
+		margin: 10px 0px 0px 15px;
+		}
+
+	.bar{
+		width: 510px;
+		height: 23px;
+		}
+
+	.bar span{
+		height: 23px;
+		}
+
+	#bar_drank{
+		width: 455px;
+		}
+
+	.subtitelvoedsel,.subtiteldrank{
+		font-size: 23px;
+		}
+
+	.subtiteldrank{
+		width: 120px;
+	}
+
+	#barchart{
+		width: 550px;
+		height: 310px;
+		}
+
+	#barchart text{
+		font-size: 17px;
+		letter-spacing: 1px;
+		}
+
+	.titel_Brandstof_barchart{
+		width: 550px;
+		height: 30px;
+		text-align: center;
+		margin-top: 0px;
+	}
+
+	.ondertitel_brandstof{
+		min-width: 550px;
+		height: 30px;
+		text-align: center;
+	}
+
+	.titel_Brandstof, .titel_Brandstof_barchart{
+		margin-top: 25px;
+	}
+}
+
+/*Hier komt de code voor desktop groot resolutie */
+@media only screen and (min-width: 1367px){
+	.logo{
+		width:10%;
+		margin-left: 35px;
+	}
+
+	.content-box1{
+		width: 1570px;
+		}
+
+	#grafiekvoedsel{
+		margin-right: 70px;
+		}
+
+	.content-box2,.content-box3{
+		width: 745px;
+		}
+
+	.content-box4{
+		width: 785px;
+		min-height: 400px;
+		margin: auto;
+		margin-right: 0px;
+		}
+
+	.content-box5{
+		width: 750px;
+		margin-left:0px;
+		}
+
+	.centertitel{
+		width: 750px;
+		}
+
+	#centertitel_brandstof{
+		width: 700px;
+		}
+
+	.Procescirkel .grafiek{ 
+		width: 750px;
+		height: 350px;
+		}
+
+	.Procescirkel .grafiek canvas{
+		margin-left: 240px;
+		}
+
+	.percentage{
+		width: 180px;
+		height: 125px;
+		}
+
+	#percentage_brandstof{
+		width:145px;
+		height:100px;
+		}
+
+	#Procescirkel_brandstof, #grafiekbrandstof{
+		width: 700px;
+		}
+
+	#Procescirkel_brandstof, #grafiekbrandstof{
+		width: 720px;
+		height: 305px;
+		}
+
+	#centertitel_brandstof{
+		width: 720px;
+		}
+
+	.bar{
+		width: 650px;
+		height: 23px;
+		}
+
+	.bar span{
+		height: 23px;
+		}
+
+	#bar_drank{
+		width: 590px;
+		}
+
+	.subtiteldrank{
+		width: 150px;
+	}
+
+	#barchart{
+		width: 750px;
+		height: 305px;
+		}
+
+	.titel_voedsel,.titel_drank, .titel_voorraden, .titel_Brandstof, .titel_Brandstof_barchart{
+		font-size: 36px;
+		height: 45px;
+		width: 700px;
+		}
+
+	.subtitelvoedsel, .subtiteldrank{
+		font-size: 25px;
+		} 
+
+	.Drankaantal, .Voedselaantal{
+		font-size: 25px;
+		width: 180px;
+		}
+	h4{
+		font-size: 21px;
+		}
+
+	p{
+		font-size: 23px;
+		}
+
+	.ondertitel_brandstof{
+		min-width: 750px;
+		height: 30px;
+		text-align: center;
+	}
+
+}
+
+	
+
+
+
+

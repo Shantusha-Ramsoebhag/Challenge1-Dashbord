@@ -5,26 +5,30 @@
 	<title>SpaceX Data</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" type="text/css" href="style/challenge1.css">
+	<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
 </head>
 <body>
 	<script src="https://code.jquery.com/jquery-3.3.1.js"></script>
 	<script src="jquery.easypiechart.js"></script>
 	<script>
-	   $(function() {
+	   $(function piechart() {
 	       $('.grafiek').easyPieChart({
 	           //your options goes here
 	           barColor: "#CF1C1C",
 	           trackColor: "#434141",
 	           lineWidth: 11,
 	           lineCap: "square",
-
+	           size:130,
 	       });
 	    });
+
+	   //$(window).resize(function)(){
+	   	//	piechart();
+	   //});
 	</script>
 	<div class="grid-container">
 		<div class="grid-item-box1">
 			<header>
-				<!--<p class="titel">Space<font color="#CF1C1C">X</font></p>-->
 				<img src="img/logoc1.png" class="logo">
 			</header>
 		</div>
@@ -35,16 +39,20 @@
 				</section>
 				<h2 class="titel_voorraden">Voorraden</h2>
 				<div class="Procescirkel">
-					<div class="grafiek" id="grafiekvoedsel" data-percent="60">60%
-						<p class="grafiektitel">Voedsel</p>
+					<div class="grafiek" id="grafiekvoedsel" data-percent="55">	<div class="percentage">55%</div>
+						<div class="centertitel">
+							<p class="grafiektitel">Eten</p>
+						</div>
 						<div class="grafiektekst_box">
-							<p class="grafiektekst">Aantal over</p>
+							<p class="grafiektekst">55% van het eten is over. Dit is 33.000 KG aan voedsel.</p>
 						</div>
 					</div>
-					<div class="grafiek" data-percent="60">60%
-						<p class="grafiektitel">Drank</p>
+					<div class="grafiek" data-percent="65"><div class="percentage">65%</div>
+						<div class="centertitel">
+							<p class="grafiektitel">Water</p>
+						</div>
 						<div class="grafiektekst_box">
-							<p class="grafiektekst">Aantal over</p>
+							<p class="grafiektekst">65% van het water is over. Dit is 130.000 Liter aan water.</p>
 						</div>
 					</div>
 				</div>
@@ -52,20 +60,119 @@
 		</div>
 		<div class="grid-item-box3">
 			<div class="content-box2">
-				<h2 class="titel_voedsel">Voedsel</h2>
+				<h2 class="titel_voedsel">Eten</h2>
+				<p>Hoeveelheid voedsel in KG.</p>
 				<li>
-					<h3>Brood</h3><span class="bar"><span class="brood"></span></span>
+					<h3 class="subtitelvoedsel">Soep</h3>
+					<h3 class="Voedselaantal">8000<font color="#CF1C1C"> van de 20K</font></h3>
+					<span class="bar"><span class="soep"></span></span>
 				</li>
-					<li>
-					<h3>Pasta</h3><span class="bar"><span class="pasta"></span></span>
+				<li>
+					<h3 class="subtitelvoedsel">Pasta</h3>
+					<h3 class="Voedselaantal">10K <font color="#CF1C1C">van de 20K</font></h3>
+					<span class="bar"><span class="pasta"></span></span>
 				</li>
-					<li>
-					<h3>Rijst</h3><span class="bar"><span class="rijst"></span></span>
+				<li>
+					<h3 class="subtitelvoedsel">Vlees</h3>
+					<h3 class="Voedselaantal">15K
+						<font color="#CF1C1C"> van de 20K </font></h3>
+					<span class="bar"><span class="vlees"></span></span>
 				</li>
 			</div>
 		</div>
-		
+		<div class="grid-item-box4">
+			<div class="content-box3">
+				<h2 class="titel_drank">Water</h2>
+				<p>Hoeveelheid water in L.</p>
+				<li>
+					<h3 class="subtiteldrank">Drinkwater</h3>
+					<h3 class="Drankaantal">80K <font color="#CF1C1C">van de 100K</font></h3>
+					<span class="bar" id="bar_drank"><span class="drinkwater"></span></span>
+				</li>
+				<li>
+					<h3 class="subtiteldrank">Douchwater</h3>
+					<h3 class="Drankaantal">30K <font color="#CF1C1C">van de 50K</font></h3>
+					<span class="bar" id="bar_drank"><span class="douchwater"></span></span>
+				</li>
+				<li>
+					<h3 class="subtiteldrank">Warm water</h3>
+					<h3 class="Drankaantal">20K <font color="#CF1C1C">van de 50K</font></h3>
+					<span class="bar" id="bar_drank"><span class="warm_water"></span></span>
+				</li>
+			</div>
+		</div>
+		<div class="grid-item-box5">
+			<div class="content-box4">
+				 <h2 class="titel_Brandstof">Brandstof</h2>
+				<div class="Procescirkel" id="Procescirkel_brandstof">
+					<div class="grafiek" id="grafiekbrandstof" data-percent="64">
+						<div class="percentage" id="percentage_brandstof">64%</div>
+						<div class="centertitel" id="centertitel_brandstof">
+							<p class="grafiektitel">Brandstof</p>
+						</div>
+						<div class="grafiektekst_box">
+							<p class="grafiektekst">64% van het brandstof is over. Dit is 3200.000 Liter aan brandstof.</p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="grid-item-box6">
+			<div class="content-box5">
+				<h2 class="titel_Brandstof_barchart">Hoeveelheid brandstof over de jaren heen</h2>
+				<p class="ondertitel_brandstof">Hoeveelheid brandstof in Liter in miljoenen uitgedrukt.</p>
+				<div id="barchart"></div>
+				<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+				<script type="text/javascript">
+				google.charts.load('current', {'packages':['corechart']});
+				google.charts.setOnLoadCallback(drawChart);
 
+				//chart tekenen en waardes geven
+				function drawChart() {
+				var data = google.visualization.arrayToDataTable([
+			        ["Element", "L", { role: "style" } ],
+			        ["2018", 5, "#434141"],
+			        ["2021", 4.5, "#434141"],
+			        ["2024", 4, "#434141"],
+			        ["2027", 3.5, "color: #434141"],
+			        ["2030", 3.2, "color: #434141"]
+			      ]);
+				var view = new google.visualization.DataView(data);
+      					view.setColumns([0, 1,
+                       { calc: "stringify",
+                         sourceColumn: 1,
+                         type: "string",
+                         role: "annotation" },
+                       2]);
+
+			     var options = {
+			        //title: "Hoeveelheid brandstof over de jaren heen",
+			        //width: 340,
+			        //height: 300,
+			        bar: {groupWidth: "95%"},
+			        legend: { position: "none" },
+
+			      };
+			      var chart = new google.visualization.ColumnChart(document.getElementById("barchart"));
+      					chart.draw(view, options);
+  				}
+
+  				$(window).resize(function(){
+	   				drawChart();
+	   			});
+
+				</script>
+			</div>
+		</div>
+		<div class="grid-item-box7">
+			<footer>
+				<p class="Copyright">&copy;Copyright 2019 SpaceX Data</p>
+			</footer>
+		</div>
 	</div>
 </body>
 </html>
+
+
+<!--new google.visualization.BarChart(document.getElementById("barchart"));
+			      chart.draw(view, options);-->
