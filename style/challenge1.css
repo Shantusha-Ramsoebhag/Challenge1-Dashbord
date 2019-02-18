@@ -52,8 +52,8 @@ section{
 }
 
 .centertitel{
-	width: 76px;
-	height: 21px;
+	width: 148px;
+	height: 23px;
 	position: absolute;
 	box-shadow: 0px 4px 5px #AFAEAE;
 	background-color: #434141;
@@ -62,11 +62,12 @@ section{
 .grafiektitel{
 	color: white;
 	font-size: 15px;
-	width: 76px;
-	height: 21px;
+	width: 148px;
+	height: 23px;
 	line-height: normal;
 	letter-spacing: 0.75px;
-	margin: auto;
+	margin-top: 3px;
+	margin-left: 5px;
 	}
 
 .grafiektekst_box{
@@ -86,6 +87,7 @@ section{
 	text-align: left;
 	margin: 10px 0px 0px 10px;
 	letter-spacing: 1px;
+	font-weight: lighter;
 	}
 
 .Procescirkel{
@@ -105,8 +107,17 @@ section{
 	font-weight: bold;	
 	}
 
-#Procescirkel_brandstof, #grafiekbrandstof{
+#Procescirkel_brandstof, #grafiekbrandstof, #grafiektekst_box_brandst{
 	width: 330px ;	
+	}
+
+#grafiektekst_brandstof{
+	width: 300px;
+	}
+
+#centertitel_brandstof{
+	height: 25px;
+	width: 330px;
 	}
 
 .percentage{
@@ -284,6 +295,7 @@ li{
 	width: 95px;
 	height: 25px; 
 	}
+
 #barchart{
 	width: 340px;
 	height: 400px;
@@ -425,6 +437,15 @@ footer{
 		text-align: left;
 		}
 
+	#grafiektekst_brandstof, #grafiektekst_box_brandst{
+		width: 138px;
+		height: 80px;
+		}
+
+	#grafiektekst_brandstof{
+		margin-left: 5px;
+	}
+
 	#barchart{
 		width: 360px;
 		height: 270px;
@@ -444,6 +465,13 @@ footer{
 		margin-top: 130px;
 		}
 
+	/*#centertitel_brandstof{
+		width: 148px;
+		height: 80px;
+		align-self: flex-end;
+		margin-top: 130px;
+		}*/
+
 	.Procescirkel .grafiek canvas{
 		margin: 100px 0px 0px 30px;
 		}
@@ -454,6 +482,7 @@ footer{
 
 	#centertitel_brandstof{
 		width: 333px;
+		height: 46px;
 		}
 
 	.titel_Brandstof_barchart{
@@ -496,6 +525,7 @@ footer{
 
 	#centertitel_brandstof{
 		width: 600px;
+		height: 56px;
 		}
 
 	.Procescirkel .grafiek{ 
@@ -585,17 +615,28 @@ footer{
 		height: 30px;
 		text-align: center;
 		margin-top: 0px;
-	}
+		}
 
 	.ondertitel_brandstof{
 		min-width: 550px;
 		height: 30px;
 		text-align: center;
-	}
+		}
 
 	.titel_Brandstof, .titel_Brandstof_barchart{
 		margin-top: 25px;
-	}
+		}
+
+	#grafiektekst_box_brandst, #grafiektekst_brandstof{
+		width: 250px;
+		height: 140px;
+		}
+
+	#grafiektekst_brandstof{
+		font-size: 23px;
+		margin: 10px 0px 0px 10px;
+		}
+	
 }
 
 /*Hier komt de code voor desktop groot resolutie */
